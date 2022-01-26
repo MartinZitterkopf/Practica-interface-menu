@@ -6,6 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./dado.component.css']
 })
 export class DadoComponent implements OnInit {
+  
   @Input() valor: number=0;
   
   constructor() { }

@@ -6,15 +6,12 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./juegodados.component.css']
 })
 export class JuegodadosComponent implements OnInit {
-	public valor1: number;
-	public valor2: number;
-	public valor3: number;
-	public resultado: string = "";
+	public valor1: number = 6;
+	public valor2: number = 6;
+	public valor3: number = 6;
+	public resultado: string = "Tire los dados para empezar a jugar";
 
 	constructor() {
-		this.valor1 = this.retornarAleatorio();
-		this.valor2 = this.retornarAleatorio();
-		this.valor3 = this.retornarAleatorio();
 	}
 
 	retornarAleatorio() {
@@ -26,9 +23,9 @@ export class JuegodadosComponent implements OnInit {
 		this.valor2 = this.retornarAleatorio();
 		this.valor3 = this.retornarAleatorio();
 		if (this.valor1==this.valor2 && this.valor1==this.valor3)    
-		  this.resultado='Ganó';
+		  this.resultado='Usted Ganó felicidades';
 		else
-		  this.resultado='Perdió';
+		  this.resultado='Desafortunadamente Perdió';
 	  }
 
 	ngOnInit(): void {

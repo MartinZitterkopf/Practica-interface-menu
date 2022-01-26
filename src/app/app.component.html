@@ -1,7 +1,20 @@
+<!-- Primer logica para rutear los componentes, sin angular material -->
+<!-- <div style="text-align:center"> -->
+<!-- <a routerLink="/game">Juego de dados</a> -  -->
+<!-- <a routerLink="/acercade">Acerca de ...</a> -->
+<!-- <div> -->
+<!-- <router-outlet></router-outlet> -->
+<!-- </div> -->
+<!-- </div> -->
+
+<div style="text-align:left">
+	<button mat-flat-button [matMenuTriggerFor]="menu" color="primary">Opciones del sitio</button>
+	<mat-menu #menu="matMenu">
+		<button mat-menu-item routerLink="/home">Home</button>
+		<button mat-menu-item routerLink="/game">Juego de Dados</button>
+		<button mat-menu-item routerLink="/acercade">Acerca de ...</button>
+	</mat-menu>
+</div>
 <div style="text-align:center">
-  <a routerLink="/game">Juego de dados</a> - 
-  <a routerLink="/acercade">Acerca de ...</a>
-  <div>
-    <router-outlet></router-outlet>
-  </div>
+	<router-outlet></router-outlet>
 </div>
